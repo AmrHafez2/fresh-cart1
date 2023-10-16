@@ -1,0 +1,14 @@
+<div class="w-75 mx-auto p-3 bg-gradient shadow rounded my-5">
+    <form (ngSubmit)="handleLogin(loginForm)" [formGroup]="loginForm">
+       <input type="email" name="userEmail" id="email" class="form-control mb-3" formControlName="email" placeholder="Enter your E-mail">
+       <input type="password" name="password" id="password" class="form-control" formControlName="password" placeholder="Enter your Password">
+
+       <div class="d-flex flex-row justify-content-between align-items-center">
+        <button  type="submit" class="btn btn-info my-3">
+          <i *ngIf="isLoading" class="fas fa-spinner fa-spin"></i>
+          <span *ngIf="!isLoading">Login</span>
+      </button>
+      <a class="link-underline-primary cursor-pointer" routerLink="/forgotpassword">Forgot Password?!</a>
+       </div>
+   </form>
+</div>

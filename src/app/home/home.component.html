@@ -1,0 +1,33 @@
+<app-slider></app-slider>
+<app-categories></app-categories>
+<section class="py-2">
+  <h2 class="fw-bolder py-2">Popular Products</h2>
+  <div class="search-products position-relative">
+    <input type="text" class="form-control mx-auto my-4 w-50 search-field rounded-pill" placeholder="Search your favorite products" [(ngModel)] = "searchTerm">
+  <span class="search-sign position-absolute d-flex justify-content-center align-items-center rounded-pill"><i class="fa-solid fa-magnifying-glass position-absolute glass"></i></span>
+  </div>
+  <div class="row mt-2">
+      <div *ngFor="let product of products |search: searchTerm" class="col-md-2">
+          <div class="product px-2 py-4 position-relative">
+              <i *ngIf="!wishlistProducts.includes(product._id)" class="fa-solid fa-heart-circle-plus heart" style="color: #213454;" (click)="addToWishlist(product._id)" #addToggle></i>
+              <a [routerLink]="['/productdetails', product._id]">
+               <img src={{product.imageCover}} alt="product image" class="w-100 product-img">
+              <span class="fw-bolder product-name">{{product.category.name}}</span>
+              <h2 class="h6 fw-bolder text-black">{{product.title.split(" ").slice(0,2).join(" ")}}</h2>
+              <div class="d-flex align-items-center justify-content-between">
+                  <span class="fw-bold">{{product.price|currency:'EGP'}}</span>
+                  <div class="rating">
+                      <i class="fa-solid fa-star star-color"></i>
+                      <span class="px-2">{{product.ratingsAverage}}</span>
+                  </div>
+              </div>
+
+              </a>
+              <button class="btn btn-primary w-100 add-product-btn" (click)="addToCart(product._id, addBtn)" #addBtn>
+                <i class="fa-solid fa-cart-plus"></i>
+                <span class="ps-2">Add to cart</span>
+            </button>
+          </div>
+      </div>
+  </div>
+</section>

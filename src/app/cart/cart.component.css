@@ -1,0 +1,28 @@
+/* body {
+  background-color: #E1857C !important;
+} */
+.err-msg {
+  color: #7A9EC1;
+  font-weight: bolder;
+}
+.text-main {
+  color: rgb(86, 236, 86);
+}
+.pay-online img{
+  width: 30px;
+  height: 30px;
+  margin-inline: 4px;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.pay-cash {
+  width: 30px;
+  height: 30px;
+}
+.displayed-items {
+  background-color: rgb(237, 236, 236);
+  border-radius: 8px;
+
+}
+

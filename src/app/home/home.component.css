@@ -1,0 +1,19 @@
+p {
+    color: teal;
+    font-size: 20px;
+    font-weight: 400;
+}
+.search-field{
+  height: 50px;
+}
+.search-sign{
+  line-height: 100%;
+  top: 0%;
+  right: 25%;
+  width: 80px;
+  height: 50px;
+  background-color: rgb(211, 181, 238);
+}
+.glass{
+  font-size: 18px;
+}

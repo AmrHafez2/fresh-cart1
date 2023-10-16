@@ -1,0 +1,32 @@
+nav {
+  transition: 1s all;
+}
+nav {
+  padding-block: 0;
+}
+.navBar-scroll-effect {
+  padding-inline: 150px;
+  background-color: #f4dede !important;
+}
+
+.logo {
+    width: 150px;
+    height: 80px;
+}
+.cart-items-notification {
+  top:-2px;
+  right:-2px;
+  font-size: 18px;
+  color: rgb(82, 233, 82);
+
+}
+.cart-items-number {
+  top: 5px;
+  right: -2px;
+  width: 18px;
+  height: 18px;
+  background-color: rgb(11, 244, 69);
+  font-size: 11px;
+  color: #fff;
+  line-height: 18px;
+}

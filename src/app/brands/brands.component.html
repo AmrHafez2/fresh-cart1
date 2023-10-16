@@ -1,0 +1,14 @@
+<section class="py-2">
+  <h2 class="fw-bolder py-2">Main Products</h2>
+  <div class="row mt-2">
+      <div *ngFor="let brand of brands" class="col-md-2">
+          <div class="product px-2 py-4">
+              <a [routerLink]="['/productdetails', brand._id]">
+                  <img src={{brand.image}} alt="product image" class="w-100 product-img">
+              <h2 class="fw-bold product-name text-center h5 mt-2">{{brand.name}}</h2>
+              </a>
+          </div>
+      </div>
+  </div>
+
+</section>

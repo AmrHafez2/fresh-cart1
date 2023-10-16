@@ -1,0 +1,72 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700&family=Inclusive+Sans&display=swap');
+
+body {
+    font-family: 'Inclusive Sans', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+.product{
+  overflow: hidden;
+}
+.product:hover {
+    border: 1px solid rgb(4, 165, 4);
+}
+.product:hover .heart{
+  opacity: 1;
+  right: 15px;
+}
+
+.product .add-product-btn {
+    transform: translateY(100%);
+    opacity: 0;
+    transition: 0.5s all;
+}
+.product:hover .add-product-btn{
+    opacity: 1;
+    transform: translateY(0%);
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+.star-color {
+    color: goldenrod;
+}
+.product-name {
+    color: #112A46;
+}
+.product-img {
+    transition: 0.5s all;
+}
+.product-img:hover {
+    transform: scale(1.03);
+
+}
+.slider-caption {
+    color: darksalmon;
+    font-family: fantasy;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: lightgray;
+}
+::-webkit-scrollbar-thumb {
+  background-color: lightcoral;
+
+}
+
+.heart {
+  position: absolute;
+  top: 25px;
+  right: -30px;
+  z-index: 99;
+  font-size: 25px;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.5s all;
+}

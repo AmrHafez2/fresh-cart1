@@ -1,0 +1,27 @@
+.container {
+  padding-top: 70px;
+}
+.btn-up {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 99;
+  width: 40px;
+  height: 40px;
+  background-color: lightcoral;
+  border: none;
+  border-radius: 10px;
+  transition: 0.5s all;
+}
+.btn-up:hover {
+  background-color: rgb(231, 139, 139);
+  color: antiquewhite;
+}
+.big-container{
+  width: 100%;
+  min-height: 100vh;
+  padding: 5%;
+  background-image: linear-gradient(rgba(224, 224, 237, 0.8), rgba(214, 216, 229, 0.8)), url(../assets/images/cart2.jpg);
+  background-position: center center;
+  background-size: cover;
+}

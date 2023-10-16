@@ -1,0 +1,15 @@
+<section class="py-2">
+  <h1 class="fw-bolder mb-4 text-center">Subcategories</h1>
+   <div class="container">
+    <div class="row mt-2">
+      <div *ngFor="let subcategory of allSubcategories" class="col-md-3">
+          <div class="product px-2 py-4">
+              <a>
+                  <img src={{categoryDetails.image}} alt="product image" class="w-100 product-img">
+              <h3 class="fw-bold subcategory-name text-center pt-2">{{subcategory.name}}</h3>
+              </a>
+          </div>
+      </div>
+  </div>
+  </div>
+</section>

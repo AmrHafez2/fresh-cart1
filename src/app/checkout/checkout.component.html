@@ -1,0 +1,13 @@
+<div class="w-50 mx-auto my-4 bg-light-subtle shadow rounded">
+  <form [formGroup]="shippingData" (ngSubmit)="handleSubmit(shippingData)">
+    <label for="details">Details</label>
+    <input type="text" id="details" formControlName="details" class="form-control mb-3">
+    <label for="phone">Phone</label>
+    <input type="tel" id="phone" formControlName="phone" class="form-control mb-3">
+    <label for="city">City</label>
+    <input type="text" id="city" formControlName="city" class="form-control mb-3">
+    <button type="submit" class="btn btn-outline-primary mt-2 w-100">Send Your Shipping Data</button>
+
+  </form>
+
+</div>

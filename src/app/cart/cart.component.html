@@ -1,0 +1,56 @@
+
+<div class="p-4 m-4 bg-main">
+  <div class="d-flex justify-content-between align-items-center">
+    <h3>Your Cart</h3>
+    <button class="btn btn-outline-danger" (click)="clear()">
+      Clear Cart
+      <i class="fa-solid fa-trash-can"></i>
+    </button>
+  </div>
+  <p *ngIf="numOfCartItems !== 0">you have {{cartDetails?.products.length}} items in your cart</p>
+  <p *ngIf="numOfCartItems === 0" class="text-danger fs-3 text-center">Your Cart is Empty...</p>
+  <p class="text-main">Total Price: {{cartDetails?.totalCartPrice}} EGP</p>
+  <div class="row" *ngIf="numOfCartItems > 0">
+    <div class="pay-online col-md-6 d-flex flex-column justify-content-between align-items-center">
+      <button class="d-block btn btn-outline-success mb-3 w-100" [routerLink]="['/checkout', cartDetails._id]">
+        <span class="h5">Pay Online</span>
+        <div class="payment-methods">
+          <img src="../../assets/images/Mastercard-Logo.wine.svg" alt="master card" class="cursor-pointer">
+          <img src="../../assets/images/American_Express-Logo.wine.svg" alt="american express" class="cursor-pointer">
+          <img src="../../assets/images/Amazon_Pay-Logo.wine.svg" alt="amazon pay"class="cursor-pointer" >
+        </div>
+      </button>
+
+    </div>
+    <div class="col-md-6">
+      <button class="d-block ms-auto btn btn-outline-success mb-3 w-100">
+        <span class="h5">Pay Cash on Delivery</span>
+        <div>
+          <img src="../../assets/images/payment.png" alt="pay in cash" class="pay-cash">
+        </div>
+      </button>
+
+    </div>
+   </div>
+
+</div>
+<div class="displayed-items p-3 shadow">
+  <div class="row d-flex align-items-center gx-2 displayed-item" *ngFor="let product of cartDetails?.products">
+    <div class="col-md-2 mb-3">
+      <img [src]="product?.product?.imageCover" alt="item image" class="w-100">
+    </div>
+    <div class="col-md-10 d-flex justify-content-between">
+      <div>
+        <h6>{{product.product.title}}</h6>
+        <h6 class="text-main">Price: {{product.price}}</h6>
+        <button (click)="removeItem(product.product._id)" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i> Remove</button>
+      </div>
+      <div>
+        <button (click)="updateItemQuantity(product.product._id, product.count + 1)" class="btn btn-dark">+</button>
+        <span class="mx-2">{{product.count}}</span>
+        <button (click)="updateItemQuantity(product.product._id, product.count - 1)" class="btn btn-dark">-</button>
+      </div>
+    </div>
+  </div>
+</div>
+
